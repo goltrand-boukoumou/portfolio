@@ -1,0 +1,17 @@
+# Goltrand Boukoumou
+
+> Portfolio de Goltrand Boukoumou, développeur web full-stack intermédiaire basé à Pointe-Noire, en République du Congo.
+
+## Pages
+
+- [Portfolio](https://goltrand-boukoumou.github.io/portfolio/): profil, concepts d'interface et coordonnées.
+- [Politique de confidentialité](https://goltrand-boukoumou.github.io/portfolio/confidentialite.html): informations sur les ressources externes et les données.
+
+## Contact et profil
+
+- E-mail : goltrandmissou@gmail.com
+- GitHub : https://github.com/goltrand-boukoumou
+
+## Précision
+
+Les projets Atlas, Mono et Cobalt affichés sur le portfolio sont des concepts visuels de démonstration, pas des références client.

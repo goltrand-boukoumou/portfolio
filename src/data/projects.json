@@ -1,0 +1,44 @@
+[
+  {
+    "id": "atlas",
+    "title": "Atlas — espace de travail",
+    "type": "CONCEPT DE DÉMONSTRATION",
+    "description": "Exploration visuelle d’un espace de travail et de suivi de projets.",
+    "category": "web",
+    "featured": true,
+    "artClass": "art-atlas",
+    "label": "01 / PRODUCTIVITY",
+    "href": "mailto:goltrandmissou@gmail.com?subject=Parlons%20d'Atlas",
+    "ariaLabel": "En savoir plus sur Atlas, plateforme de gestion de projets",
+    "tags": ["Concept UI", "Démo visuelle"],
+    "content": "<div class=\"atlas-ui\"><div class=\"atlas-sidebar\"><span class=\"atlas-logo\">a.</span><span class=\"side-active\">▦</span><span>◷</span><span>◉</span><span>⌘</span><span class=\"side-avatar\">N</span></div><div class=\"atlas-content\"><div class=\"atlas-top\"><span>Workspace / <b>Overview</b></span><span class=\"atlas-top-avatar\">GB</span></div><div class=\"atlas-greeting\">Bonjour Goltrand <span>✳</span></div><div class=\"atlas-subline\">Voici ce qui se passe dans votre espace.</div><div class=\"atlas-stats\"><span><small>PROJETS ACTIFS</small><b>08</b><i>↗ 2 ce mois</i></span><span><small>TÂCHES TERMINÉES</small><b>24</b><i>↑ 12% cette semaine</i></span></div><div class=\"atlas-board\"><span>Votre semaine <small>···</small></span><div><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div></div>"
+  },
+  {
+    "id": "mono",
+    "title": "Mono — petits rituels",
+    "type": "CONCEPT DE DÉMONSTRATION",
+    "description": "Concept d’interface mobile autour du suivi des habitudes quotidiennes.",
+    "category": "design",
+    "featured": false,
+    "artClass": "art-mono",
+    "label": "02 / DAILY RITUALS",
+    "href": "mailto:goltrandmissou@gmail.com?subject=Parlons%20de%20Mono",
+    "ariaLabel": "En savoir plus sur Mono, application de suivi des habitudes",
+    "tags": ["Concept UI", "Démo visuelle"],
+    "content": "<div class=\"mono-phone\"><div class=\"phone-speaker\"></div><div class=\"phone-date\">MARDI 14 MAI <span>☼ 21°</span></div><div class=\"phone-title\">Fais de la place<br>à l’essentiel.</div><div class=\"habit-ring\"><div>68%<small>de ta journée</small></div></div><div class=\"habit-label\">TON RYTHME, À TOI</div><div class=\"habit-row\"><i>✓</i><span>Lire 20 minutes</span><b>20/20</b></div><div class=\"habit-row\"><i>·</i><span>Sortir marcher</span><b>12/30</b></div></div>"
+  },
+  {
+    "id": "cobalt",
+    "title": "Cobalt — objets durables",
+    "type": "CONCEPT DE DÉMONSTRATION",
+    "description": "Exploration visuelle d’une boutique en ligne dédiée aux objets du quotidien.",
+    "category": "web",
+    "featured": false,
+    "artClass": "art-cobalt",
+    "label": "03 / CONSCIOUS COMMERCE",
+    "href": "mailto:goltrandmissou@gmail.com?subject=Parlons%20de%20Cobalt",
+    "ariaLabel": "En savoir plus sur Cobalt, boutique en ligne responsable",
+    "tags": ["Concept UI", "Démo visuelle"],
+    "content": "<div class=\"cobalt-window\"><div class=\"cobalt-nav\"><b>cobalt<span>.</span></b><span>Objets&nbsp;&nbsp;&nbsp; Histoire&nbsp;&nbsp;&nbsp; Journal</span><i>◯</i></div><div class=\"cobalt-copy\"><small>DES OBJETS QUI RESTENT.</small><b>Le quotidien,<br>en mieux.</b><span>Des essentiels bien pensés, fabriqués pour durer.</span><i>Découvrir la collection&nbsp; ↗</i></div><div class=\"cobalt-object\"><div class=\"vase vase-one\"></div><div class=\"vase vase-two\"></div><div class=\"vase vase-three\"></div><div class=\"vase-shadow\"></div></div><div class=\"cobalt-foot\">SÉLECTION MAISON&nbsp;&nbsp; / &nbsp;&nbsp;ÉTÉ 2025</div></div>"
+  }
+]

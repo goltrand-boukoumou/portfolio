@@ -1,15 +1,27 @@
 # Goltrand Boukoumou — Portfolio développeur
 
-Portfolio responsive en HTML, CSS et JavaScript natifs. Pour le lancer, ouvrez `index.html` dans un navigateur ; aucune installation ni compilation n'est nécessaire. Les images du hero adaptées à chaque écran se trouvent dans `Documents/HeroPortfolio01.webp` (ordinateur), `Documents/HeroPortfolio02.webp` (tablette) et `Documents/HeroPortfolio03.webp` (mobile).
+Portfolio responsive développé avec Vite + React. Pour lancer le projet en local :
+
+```bash
+npm install
+npm run dev
+```
+
+La version de production est générée dans `dist/` via `npm run build`.
+Les images du hero adaptées à chaque écran se trouvent dans `public/Documents/HeroPortfolio01.webp`, `public/Documents/HeroPortfolio02.webp` et `public/Documents/HeroPortfolio03.webp`.
 
 ## Référencement inclus
 
 - Titres distincts, descriptions, URL canoniques et métadonnées Open Graph / Twitter pour les pages indexables.
-- `robots.txt`, `sitemap.xml` et `llms.txt` à la racine du site.
+- `public/robots.txt`, `public/sitemap.xml` et `public/llms.txt` servis directement par Vite.
 - Données structurées Schema.org `Person`, reliées au profil GitHub et à l’URL publique.
 - Descriptions alternatives pour l’image principale, navigation interne, parcours, FAQ et CTA de contact fixe sur mobile.
-- Page 404 personnalisée et page de confidentialité adaptée à un site statique sans formulaire ni outil d’analyse d’audience.
+- Page 404 personnalisée et page de confidentialité adaptées à un site statique sans formulaire ni outil d’analyse d’audience.
 - Les projets Atlas, Mono et Cobalt sont explicitement présentés comme des concepts visuels, pas comme des références client.
+
+## Déploiement GitHub Pages
+
+Un workflow GitHub Actions est présent dans `.github/workflows/deploy.yml` pour publier automatiquement le site sur GitHub Pages à partir du dossier `dist/`.
 
 ## Avant la mise en ligne
 
