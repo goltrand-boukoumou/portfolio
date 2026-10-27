@@ -17,7 +17,7 @@ Les images du hero adaptées à chaque écran se trouvent dans `public/Documents
 - Données structurées Schema.org `Person`, reliées au profil GitHub et à l’URL publique.
 - Descriptions alternatives pour l’image principale, navigation interne, parcours, FAQ et CTA de contact fixe sur mobile.
 - Page 404 personnalisée et page de confidentialité adaptées à un site statique sans formulaire ni outil d’analyse d’audience.
-- Les projets Atlas, Mono et Cobalt sont explicitement présentés comme des concepts visuels, pas comme des références client.
+- Cap Études est présenté comme un projet réalisé, avec des liens vers la démonstration et le dépôt source. Atlas, Mono et Cobalt restent clairement identifiés comme des concepts visuels.
 
 ## Déploiement GitHub Pages
 

@@ -8,6 +8,7 @@ function App() {
   const [timeline, setTimeline] = useState([]);
   const [faq, setFaq] = useState([]);
   const [selectedFilter, setSelectedFilter] = useState('all');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     setProjects(projectsData);
@@ -19,6 +20,11 @@ function App() {
     const year = document.querySelector('#current-year');
     if (year) year.textContent = new Date().getFullYear();
   }, []);
+
+  useEffect(() => {
+    document.body.classList.toggle('menu-open', isMenuOpen);
+    return () => document.body.classList.remove('menu-open');
+  }, [isMenuOpen]);
 
   const visibleProjects =
     selectedFilter === 'all'
@@ -34,15 +40,22 @@ function App() {
           <span className="brand-mark" aria-hidden="true">G<span>.</span></span>
           <span>Goltrand Boukoumou</span>
         </a>
-        <button className="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Ouvrir le menu">
+        <button
+          className="menu-toggle"
+          type="button"
+          aria-expanded={isMenuOpen}
+          aria-controls="navigation"
+          aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+          onClick={() => setIsMenuOpen((open) => !open)}
+        >
           <span></span><span></span>
         </button>
-        <nav className="navigation" id="navigation" aria-label="Navigation principale">
-          <a href="#projets">Projets</a>
-          <a href="#apropos">À propos</a>
-          <a href="#parcours">Parcours</a>
-          <a href="#faq">Questions</a>
-          <a className="nav-contact" href="#contact">On se parle <span aria-hidden="true">↗</span></a>
+        <nav className={`navigation ${isMenuOpen ? 'is-open' : ''}`} id="navigation" aria-label="Navigation principale">
+          <a href="#projets" onClick={() => setIsMenuOpen(false)}>Projets</a>
+          <a href="#apropos" onClick={() => setIsMenuOpen(false)}>À propos</a>
+          <a href="#parcours" onClick={() => setIsMenuOpen(false)}>Parcours</a>
+          <a href="#faq" onClick={() => setIsMenuOpen(false)}>Questions</a>
+          <a className="nav-contact" href="#contact" onClick={() => setIsMenuOpen(false)}>On se parle <span aria-hidden="true">↗</span></a>
         </nav>
       </header>
 
@@ -74,14 +87,14 @@ function App() {
 
         <section className="projects section-wrap" id="projets" aria-labelledby="projects-title">
           <div className="section-heading">
-            <div><p className="eyebrow">CONCEPTS D’INTERFACE</p><h2 id="projects-title">Des idées <span>en images.</span></h2></div>
-            <p>Ces visuels sont des concepts de démonstration, et non des références client.</p>
+            <div><p className="eyebrow">PROJETS & EXPLORATIONS</p><h2 id="projects-title">Des idées <span>en action.</span></h2></div>
+            <p>Un projet réalisé et des concepts d’interface clairement présentés comme des démonstrations.</p>
           </div>
 
           <div className="project-filters" role="group" aria-label="Filtrer les projets">
             {[
-              { id: 'all', label: 'Tout', count: 3 },
-              { id: 'web', label: 'Web app', count: 2 },
+              { id: 'all', label: 'Tout', count: 4 },
+              { id: 'web', label: 'Web app', count: 3 },
               { id: 'design', label: 'UI / UX', count: 1 },
             ].map((filter) => (
               <button
@@ -100,8 +113,23 @@ function App() {
           <div className="project-grid" aria-live="polite">
             {visibleProjects.map((project) => (
               <article key={project.id} className={`project-card ${project.featured ? 'project-featured' : ''}`} data-category={project.category}>
-                <a className={`project-art ${project.artClass}`} href={project.href} aria-label={project.ariaLabel}>
-                  <div dangerouslySetInnerHTML={{ __html: project.content }} />
+                <a
+                  className={`project-art ${project.artClass}`}
+                  href={project.href}
+                  aria-label={project.ariaLabel}
+                  target={project.repoHref ? '_blank' : undefined}
+                  rel={project.repoHref ? 'noreferrer' : undefined}
+                >
+                  {project.image ? (
+                    <img
+                      className="project-preview-image"
+                      src={project.image}
+                      alt={project.imageAlt}
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div dangerouslySetInnerHTML={{ __html: project.content }} />
+                  )}
                   <span className="art-label">{project.label}</span>
                   <span className="art-open" aria-hidden="true">↗</span>
                 </a>
@@ -111,10 +139,17 @@ function App() {
                     <h3>{project.title}</h3>
                     <p>{project.description}</p>
                   </div>
-                  <div className="project-tags">
-                    {project.tags.map((tag) => (
-                      <span key={`${project.id}-${tag}`}>{tag}</span>
-                    ))}
+                  <div className="project-meta">
+                    <div className="project-tags">
+                      {project.tags.map((tag) => (
+                        <span key={`${project.id}-${tag}`}>{tag}</span>
+                      ))}
+                    </div>
+                    {project.repoHref && (
+                      <a className="project-source-link" href={project.repoHref} target="_blank" rel="noreferrer">
+                        Code source <span aria-hidden="true">↗</span>
+                      </a>
+                    )}
                   </div>
                 </div>
               </article>
@@ -129,7 +164,7 @@ function App() {
               <p className="eyebrow">UN PEU PLUS SUR MOI</p>
               <h2 id="about-title">Le bon code.<br />La <span>bonne intention.</span></h2>
               <p>Je suis développeur web full-stack intermédiaire, basé à Pointe-Noire, en République du Congo.</p>
-              <p>Ce portfolio présente mon profil et des concepts d’interface réalisés à titre de démonstration.</p>
+              <p>Ce portfolio présente mon profil, un projet réalisé et des concepts d’interface de démonstration.</p>
               <a className="text-arrow" href="https://github.com/goltrand-boukoumou" target="_blank" rel="me">Voir mon profil GitHub <span aria-hidden="true">↗</span></a>
             </div>
           </div>
