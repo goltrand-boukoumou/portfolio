@@ -9,3 +9,7 @@ dist/
 .env
 .env.local
 *.log
+
+# Local notes and personal information
+PersonalInfos.txt
+fichier_Seo.txt
